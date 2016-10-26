@@ -1,0 +1,26 @@
+{
+"info": {
+	"title":"Übersicht aller möglichen Kanten/Connections"
+	"desc":".."
+}
+"templates": [
+	{
+		"uuid":"",
+		"slug":"consists_of",
+		"label":"CONSISTS_OF",
+		"parents":["another Template-ConnectionUUID"],
+		"paramTypes": [
+			{
+				"slug":""
+				"label":""
+			}
+		],
+		"methodTypes": [
+			{
+				"slug":"",
+				"label":""
+			}
+		]
+	}
+]
+}

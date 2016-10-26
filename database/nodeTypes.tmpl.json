@@ -1,0 +1,36 @@
+{
+"info": {
+	"title":"Übersicht aller möglichen Labels/Typen von Nodes"
+	"desc":".."
+},
+"templates": [
+	{
+		"uuid":"",
+		"slug":"tool",
+		"label":"TOOL",
+		"parents":["another NodeTypeUUID"],
+		"paramTypes": [
+			{
+				"slug":"",
+				"label":""
+			}
+		],
+		"methodTypes": [
+			{
+				"slug":"",
+				"label":""
+			}
+		],
+		"ruleEngine": {
+			"rules": [
+				{
+					"connection":"connectionTypeSlug",
+					"min":0, //nur angegeben, wenn das min höher als 0 liegt
+					"max":1 //nur angegeben, wenn es ein max gibt
+					"to": "nodeTypeSlug"
+				}
+			]
+		}
+	}
+]
+}
