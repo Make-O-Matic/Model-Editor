@@ -5,21 +5,21 @@ Info
 Allgemein
 	Rules werden in CypherQueries geschrieben und nicht mit eigenen Parametern
 
-NodesType
+NodeTypes
 	stellt die Labels im Graph dar
 	hat Parameter und Methoden. Da diese für jede Instanz gleich sind, handelt es sich um __methodTypes und __paramTypes
-	
+
 Node
 	- ein Node kann mehrere __nodeTypes haben
 	- die Parameter die ein Node halten kann, sind abgeleitet aus den NodeTypes
-	- es können zur Laufzeit neue Parameter hinzugefügt werden. Allerdings muss jeder __param einen __paramType haben 
+	- es können zur Laufzeit neue Parameter hinzugefügt werden. Allerdings muss jeder __param einen __paramType haben
 	und ein _paramType muss mindestens einem __nodeType zugeordnet sein
-	
+
 
 Funktionsweise
 	_visualNode(_node)
 	_visualConnection(_connection)
-	
+
 __graph
 	___construct()
 	.uuid() //gibt die UUID zurück
@@ -28,13 +28,13 @@ __graph
 	.isfiltered() //gibt den aktuellen Filter zurück oder "false" zurück
 	.nodes() //gibt eine _list() aller _nodes() aus
 	.connections() //gibt eine _list() aller _connections() aus
-	
+
 __filter
 	___construct()
 	.uuid() //gibt die UUID zurück
-	.remove() //löscht den aktuellen filter	
+	.remove() //löscht den aktuellen filter
 	.reset() //entfernt diesen Filter vom übergeordneten Objekt
-	
+
 __node
 	___construct()
 	.uuid() //gibt die UUID zurück
@@ -43,7 +43,7 @@ __node
 	.params() //gibt eine Liste aller Parameter des Knotens zurück
 	.remove() //löscht diesen Knoten aus jeder Liste, Element in dem er gespeichert ist
 	.connectTo(type /*_connectionType()*/, to /*_node()*/) //verbindet diesen Knoten mit einem anderen Knoten oder erzeugt einen neuen mit dem verbunden werden kann
-	
+
 __connection
 	___construct()
 	.uuid() //gibt die UUID zurück
@@ -53,14 +53,14 @@ __connection
 	.follow(direction) //Reise an ein Ende der Kante
 	.type() //gibt den Typen der Kante zurück
 	.params() //gibt eine Liste aller Parameter der Kante zurück
-	
+
 
 __connectionType
 	___construct()
 	.uuid()
 	.label() //gibt die Bezeichnung des Kantentyps zurück
 	.params() //gibt eine Liste aller _paramTypes() zurück
-	
+
 
 __list
 	___construct()
@@ -68,7 +68,7 @@ __list
 	.info() //gibt eine Information über die Liste zurück
 	.add(_element /* Object() */) //fügt ein _element der Liste hinzu
 	.remove(_element /* Object() */) //entfernt ein __element aus der Liste
-	.filter(_index /* function(_ni, _ai, _element) {} */) //erstellt eine neue Liste in der alle verfügbaren __elements entsprechend der _index Funktion aufgelistet sind 
+	.filter(_index /* function(_ni, _ai, _element) {} */) //erstellt eine neue Liste in der alle verfügbaren __elements entsprechend der _index Funktion aufgelistet sind
 		.filter(_index, _format /* function(_element) {} */) //formatiert die ausgegebenen __elements entsprechend der _format Funktion
 		.filter(_index, _format ,_filter /* function(_element) {.... return true/false} */) //erstellt intern einen __filter() und wendet diesen auf die neue Liste an
 		//die neu erstellte Liste speichert eine Referenz zur Originalliste ab.
@@ -76,14 +76,14 @@ __list
 	.reset() //löscht alle Filter
 	.basedOn() //gibt die __list (Quelle) zurück auf der diese Liste basiert. Hat diese Liste keine Quelle, so wird "false" zurück gegeben
 	.clear() //löscht alle __elements aus dieser Liste
-	
+
 __paramType
 	___construct(_rule /* function(value) */)
 	.uuid() //gibt die UUID zurück
 	.type() //gibt den Datentyp zurück
 	.slug() //gibt die programminterne Bezeichnung zurück
 	.label() //gibt die Bezeichnung (Interface) zurück
-	
+
 _methodType
 	__construct()
 	.uuid() //gibt die UUID zurück
@@ -97,7 +97,7 @@ _param
 	.type() //gibt den Datentyp aus, der zulässig ist
 	.value() //gibt den Wert des Parameters zurück
 		.value(_val /* String, Number,... != Object() */)
-	.eval() //gibt die Evaluierungsfunktionen zurück	
-		.eval(_val) //prüft einen Wert "_val" 
+	.eval() //gibt die Evaluierungsfunktionen zurück
+		.eval(_val) //prüft einen Wert "_val"
 		.eval(_val, _events /* {"onWrongType":function(_val) {}}*/)
 	.del() //löscht diesen Parameter (nur die Instanz des entsprechenden __paramTypes())

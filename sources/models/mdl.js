@@ -1,4 +1,4 @@
-function _graphDB(data) {
+function __Graph(_database) {
 	//Stellt ein Netzwerk aus _nodes und _connections dar
 
 	var type = {
@@ -9,7 +9,7 @@ function _graphDB(data) {
 	};
 
 	var root;
-	
+
 	var nodes = {};
 	var connections = {};
 	/* TODO - alles auf _list() umbauen, damit man die Listen besser verwalten kann
@@ -207,7 +207,7 @@ function _graphDB(data) {
 		this.info = function() {
 			console.log(infotext);
 		};
-		
+
 		//verwalten & modifizieren
 		this.add = function(_element, __indexFunction) {
 
@@ -257,7 +257,7 @@ function _graphDB(data) {
 			console.log(listElements);
 			return listIndex;
 		};
-		
+
 		this.findByIndex = function(i) {
 			return index[i];
 		};
@@ -266,7 +266,7 @@ function _graphDB(data) {
 				listElements[id];
 			} else {
 				return false;
-			}			
+			}
 		};
 	}
 

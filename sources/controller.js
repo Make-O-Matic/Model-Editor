@@ -1,13 +1,5 @@
-//Systemkomponenten bzw. Helper-Funktionen
-var utils = {
-	"uuid" : function() {
-		function s4() {
-			return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
-		}
-
-		return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
-	}
-};
+//'use strict'
+var driver;
 
 $(document).ready(function() {
 	console.log("ready!");
@@ -17,7 +9,7 @@ $(document).ready(function() {
 	*/
 
 	// Create a driver instance, for the user neo4j with password neo4j.
-	var driver = neo4j.v1.driver("bolt://localhost", neo4j.v1.auth.basic("neo4j", "mom"));
+	//driver = neo4j.v1.driver("bolt://localhost", neo4j.v1.auth.basic("neo4j", "mom"));
 
 	/*
 	 * Datenmodell

@@ -1,14 +1,18 @@
-function __uuid() {
+function __uuid(_uuid) {
 	var id;
 
 	(function() {
-		id = function() {
-			function s4() {
-				return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
-			};
+		if(_uuid != null && typeof _uuid == "string") {
+			id = _uuid;
+		} else {
+			id = function() {
+				function s4() {
+					return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+				};
 
-			return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
-		}();
+				return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+			}();
+		}
 	})();
 
 	this.id = function() {

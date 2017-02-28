@@ -4,7 +4,7 @@
 //die folgenden Nodes sollen von __Node() erben. Die uuid soll immer von einem Node kommen
 //http://molily.de/javascript-pseudoklassen/
 
-//static 
+//static
 
 function __PERSON(_uuid, _data) {
 	/*(static)*/
@@ -12,10 +12,10 @@ function __PERSON(_uuid, _data) {
 	this.__lastName; //"Laber"
 	this.__birthday; //23.03.1988
 	this.__gender; //male OR female
-	
+
 	//Konstruktor
 	(function(self) {
-		self.__uuid = _uuid || new __uuid(); 
+		self.__uuid = _uuid || new __uuid();
 	})(this);
 };
 
@@ -52,8 +52,8 @@ __CREDENTIALS__.prototype.constructor = __CREDENTIALS__;
 function __LANGUAGE () {
 	/*(static)*/
 	var uuid; //UUID
-    var name; //"Deutsch"
-    var slug; //"german"
+  var name; //"Deutsch"
+  var slug; //"german"
 }
 
 __LANGUAGE.prototype = new __Node();
@@ -71,7 +71,7 @@ __CAPTION.prototype.constructor = __CAPTION;
 function __PARAMTYPE () {
 	/*(static)*/
 	var uuid; //UUID
-	var slug; //"name"	
+	var slug; //"name"
 }
 
 __PARAMTYPE.prototype = new __Node();
@@ -108,7 +108,7 @@ __IMAGE.prototype.constructor = __IMAGE;
 function __DATATYPE () {
 	/*(static)*/
 	var slug; //"string"
-	var type; //"String"	
+	var type; //"String"
 }
 
 __DATATYPE.prototype = new __Node();

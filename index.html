@@ -11,8 +11,11 @@
   	<input type="button" value="create ATTRIBUTE" id="btn_createAttribute">
   	<ul id="lst_attributes"></ul>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  <!-- Graph Visualisation Lib -->
+  
   <!-- neo4j Binary Driver -->
   <script src="sources/lib/neo4j-web.min.js"></script>
+  <script src="sources/Classes/database/_Neo4jCall.js"></script>
   <!-- Helper -->
   <script src="sources/helper.js" type="text/javascript"></script>
   <!-- Data -->
@@ -23,6 +26,7 @@
   <script src="sources/Classes/standard/_Entity.js" type="text/javascript"></script>
   <script src="sources/Classes/standard/_Node.js" type="text/javascript"></script>
   <script src="sources/Classes/standard/_Relation.js" type="text/javascript"></script>
+  <script src="sources/Classes/standard/_Listener.js" type="text/javascript"></script>
   <!-- Neo4j -->
   <script src="sources/Classes/nodes/nodeTypes.static.js" type="text/javascript"></script>
   <script src="sources/Classes/nodes/nodeTypes.dynamic.js" type="text/javascript"></script>
@@ -37,5 +41,9 @@
   <script src="sources/views/view.js" type="text/javascript"></script>
   <!-- Controller -->
   <script src="sources/controller.js" type="text/javascript"></script>
+
+  <!-- test -->
+  <script src="sources/Classes/standard/_GenericGraphObject.js" type="text/javascript"></script>
+  <script src="test.entity-interaction-process.js" type="text/javascript"></script>
   </body>
 </html>

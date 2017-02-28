@@ -1,0 +1,5 @@
+open ubuntu console
+enter command "(sudo) service neo4j start"
+open DB-Editor: "http://localhost:7474/browser/" in Chrome
+open Project-Folder: "file:///home/manuel/webDev/MOM/Model-Editor/" in Chrome
+start developing

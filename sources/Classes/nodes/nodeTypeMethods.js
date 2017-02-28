@@ -9,10 +9,10 @@ __PERSON.method("meineMethode", [{"name":"String", "age":"Integer"}], function(s
 }, "cyperQuery");
 */
 
-/*
+
 __PERSON.prototype.methods["createAccount"] = {
 	"todo": "(self)__CREATED__(__ACCOUNT)",
-	"rel": [],	
+	"rel": [],
 	"func" : function(self, rel) {
 		//new __CREATED__(self, __ACCOUNT());
 		return this;
@@ -21,19 +21,18 @@ __PERSON.prototype.methods["createAccount"] = {
 
 __PERSON.prototype.methods["addToInventory"] = {
 	"todo": "(self)__OWNS__(__ASSET)",
-	"rel": [],	
+	"rel": [],
 	"func" : function(self, rel) {
-		
+
 		return this;
 	}
 };
 
 __ACCOUNT.prototype.methods["addCredentials"] = {
 	"todo": "(self)__LOGIN_BY__(__CREDENTIALS__)",
-	"rel": [],	
+	"rel": [],
 	"func" : function(self, rel) {
-		
+
 		return this;
 	}
 };
-*/
